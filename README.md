@@ -2,6 +2,8 @@
 
 NUTFes の Web 系リポジトリで再利用するための APM パッケージです。共通の開発方針、Web レビュー用プロンプト、Next.js/React 実装フローのスキルをまとめて配布します。
 
+このパッケージは、各プロダクトが Docker ベースの開発環境を持ち、日常の作業コマンドも `make` / `mise` / `docker compose` などの repo 既存ラッパー経由で実行される前提で設計しています。
+
 ## 何を提供するか
 
 - `.apm/instructions/`
@@ -42,6 +44,17 @@ dependencies:
 ```bash
 apm install
 ```
+
+## 開発フローの前提
+
+このパッケージが想定する各プロダクトの作業方針は次の通りです。
+
+- 開発環境は Docker ベースで扱う
+- コマンド実行は、まず `make`、次に `mise run`、その次に `docker compose exec` / `docker compose run` を探す
+- ホストでの `npm` / `pnpm` / `yarn` / `python` / `go` 直実行は、repo がそれを正式入口にしている場合を除いて避ける
+- lint / typecheck / test / build も同じく repo の公式ラッパー経由で実行する
+
+つまり、このパッケージは「Docker 上で動くプロダクトに対して、repo が用意したコマンドツールを使って開発を進める」ための共通ルール集です。
 
 ## 固定版の使い方
 
