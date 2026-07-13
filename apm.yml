@@ -1,5 +1,5 @@
 name: nutfes-apm-kit
-version: 0.1.0
+version: 0.2.0
 description: NUTFes の Web 系リポジトリ向けに共有する APM パッケージです。
 author: NUTFes
 dependencies:

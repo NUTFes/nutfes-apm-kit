@@ -15,9 +15,11 @@ NUTFes の Web 系リポジトリで再利用するための APM パッケージ
   - findings-first の Web レビュー
   - repo 文脈を踏まえた実装計画
   - PR 前のリリースチェック
+  - PR番号を指定して発火する PR コードレビュー（`/review-pr <pr_number>`）
 - `.apm/skills/`
   - NUTFes 系 Web リポジトリ向け実装フロー
   - Next.js / React 向けレビュー手順
+  - Rails / Next.js / Go(Echo) 向け PR コードレビュー（影響範囲調査 + 2パスレビューを必須化）
 
 v1 では agents / hooks / MCP / transitive dependencies は含めません。
 
@@ -169,4 +171,8 @@ apm compile --target codex
     ├── instructions
     ├── prompts
     └── skills
+        ├── code-review
+        │   └── guidelines
+        ├── web-feature
+        └── web-review
 ```
