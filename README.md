@@ -15,6 +15,7 @@ NUTFes の Web 系リポジトリで再利用するための APM パッケージ
   - findings-first の Web レビュー
   - repo 文脈を踏まえた実装計画
   - PR 前のリリースチェック
+  - PR番号を指定して発火する PR コードレビュー（`/review-pr <pr_number>`）
 - `.apm/skills/`
   - NUTFes 系 Web リポジトリ向け実装フロー
   - Next.js / React 向けレビュー手順
